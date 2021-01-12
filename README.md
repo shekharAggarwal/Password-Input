@@ -16,9 +16,9 @@ The source code is **100% Dart**, and everything resides in the [/lib](https://g
 
 ## quick UIs made using Password Input
 
-| Without Input                                             | With Input                                                |
-| --------------------------------------------------------- | --------------------------------------------------------- |
-| <img src="img/without_input.png" width="300"/>            | <img src="img/with_input.png" width="300"/>               |
+| Without Input                                                                                                                 | With Input                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/shekharAggarwal/Password-Input/blob/master/img/with_input.png?raw=true" width="300"/>            | <img src="https://github.com/shekharAggarwal/Password-Input/blob/master/img/with_input.png?raw=true" width="300"/>               |
 
 
 ## 💻 Installation
