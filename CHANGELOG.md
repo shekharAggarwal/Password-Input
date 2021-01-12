@@ -1,3 +1,7 @@
+## [0.0.4] - Release
+
+* Fixing Readme.
+
 ## [0.0.3] - Release
 
 * Fixing Readme.
