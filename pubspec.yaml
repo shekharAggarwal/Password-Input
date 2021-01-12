@@ -1,7 +1,7 @@
 name: password_input
 description: A new Flutter package which helps developers to get input of password in best UI.
-version: 0.0.1
-homepage: https://github.com/shekharAggarwal/Pssword-Input
+version: 0.0.2
+homepage: https://github.com/shekharAggarwal/Password-Input
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

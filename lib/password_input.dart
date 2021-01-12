@@ -307,11 +307,11 @@ class PasswordInputTextField extends StatefulWidget {
 
   PasswordInputTextField({
     Key key,
-    this.passwordLength: 6,
+    @required this.passwordLength,
     this.onSubmit,
     this.decoration: const BoxLooseDecoration(),
     List<TextInputFormatter> inputFormatter,
-    this.keyboardType: TextInputType.phone,
+    this.keyboardType: TextInputType.text,
     this.controller,
     this.focusNode,
     this.autoFocus = false,
@@ -337,7 +337,7 @@ class PasswordInputTextField extends StatefulWidget {
                     (decoration.gapSpaces?.length ?? (passwordLength - 1)))),
         inputFormatters = inputFormatter == null
             ? <TextInputFormatter>[
-                FilteringTextInputFormatter.digitsOnly,
+                FilteringTextInputFormatter.singleLineFormatter,
                 LengthLimitingTextInputFormatter(passwordLength)
               ]
             : inputFormatter
@@ -535,11 +535,12 @@ class _PasswordPaint extends CustomPainter {
     this.type: PasswordEntryType.boxTight,
     this.themeData,
   }) : this.decoration = decoration.copyWith(
-          textStyle: decoration.textStyle ?? themeData.textTheme.headline1,
+    textStyle: decoration.textStyle ?? themeData.textTheme.headline5,
           errorTextStyle: decoration.errorTextStyle ??
               themeData.textTheme.caption.copyWith(color: themeData.errorColor),
           hintTextStyle: decoration.hintTextStyle ??
-              themeData.textTheme.headline1.copyWith(color: themeData.hintColor),
+              themeData.textTheme.headline5
+                  .copyWith(color: themeData.hintColor),
         );
 
   @override
@@ -973,11 +974,11 @@ class PasswordInputTextFormField extends FormField<String> {
     Key key,
     this.controller,
     String initialValue,
-    this.passwordLength = 6,
+    @required this.passwordLength,
     ValueChanged<String> onSubmit,
     PasswordDecoration decoration = const BoxLooseDecoration(),
     List<TextInputFormatter> inputFormatter,
-    TextInputType keyboardType = TextInputType.phone,
+    TextInputType keyboardType = TextInputType.text,
     FocusNode focusNode,
     bool autoFocus = false,
     TextInputAction textInputAction = TextInputAction.done,
