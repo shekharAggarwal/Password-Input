@@ -1,4 +1,4 @@
-## [0.0.5] - Release
+## [0.1.0] - Release
 
 * Updated to null-safety.
 
