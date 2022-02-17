@@ -14,11 +14,11 @@ class _PasswordScreenState extends State<PasswordScreen> {
   String _errorMessage = "";
 
   /// Decorate the outside of the Pin.
-  PasswordDecoration _pinDecoration;
+  late PasswordDecoration _pinDecoration;
 
-  PasswordDecoration _looseDecoration;
+  late PasswordDecoration _looseDecoration;
 
-  PasswordDecoration _tightDecoration;
+  late PasswordDecoration _tightDecoration;
 
   @override
   void initState() {
@@ -98,9 +98,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         ],
                         textInputAction: TextInputAction.done,
                         onSubmit: (password) {
-                          if (password == null ||
-                              password.isEmpty ||
-                              password.length > 6)
+                          if (password.isEmpty || password.length > 6)
                             setState(() {
                               _errorMessage = "Enter Password";
                             });
@@ -122,9 +120,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         ],
                         textInputAction: TextInputAction.done,
                         onSubmit: (password) {
-                          if (password == null ||
-                              password.isEmpty ||
-                              password.length > 6)
+                          if (password.isEmpty || password.length > 6)
                             setState(() {
                               _errorMessage = "Enter Password";
                             });
@@ -146,9 +142,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         ],
                         textInputAction: TextInputAction.done,
                         onSubmit: (password) {
-                          if (password == null ||
-                              password.isEmpty ||
-                              password.length > 6)
+                          if (password.isEmpty || password.length > 6)
                             setState(() {
                               _errorMessage = "Enter Password";
                             });
@@ -163,13 +157,14 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 flex: 3,
                 child: Container(
                   alignment: Alignment.topCenter,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        )),
                     onPressed: () {
-                      if (_passwordEditingController.value.text == null ||
-                          _passwordEditingController.value.text.isEmpty ||
+                      if (_passwordEditingController.value.text.isEmpty ||
                           _passwordEditingController.value.text.length > 6)
                         setState(() {
                           _errorMessage = "Enter Password";
@@ -180,7 +175,6 @@ class _PasswordScreenState extends State<PasswordScreen> {
                             MaterialPageRoute(
                                 builder: (_) => PasswordScreen()));
                     },
-                    color: Colors.black,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 5.0, horizontal: 15.0),
@@ -200,5 +194,3 @@ class _PasswordScreenState extends State<PasswordScreen> {
     );
   }
 }
-
-

@@ -1,3 +1,7 @@
+## [0.0.5] - Release
+
+* Updated to null-safety.
+
 ## [0.0.4] - Release
 
 * Fixing Readme.
