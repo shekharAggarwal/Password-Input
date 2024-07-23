@@ -19,12 +19,12 @@ class PasswordPaint extends CustomPainter {
     this.type: PasswordEntryType.boxTight,
     required this.themeData,
   }) : this.decoration = decoration.copyWith(
-          textStyle: decoration.textStyle ?? themeData.textTheme.headline5!,
+          textStyle: decoration.textStyle ?? themeData.textTheme.headlineSmall!,
           errorTextStyle: decoration.errorTextStyle ??
-              themeData.textTheme.caption!
-                  .copyWith(color: themeData.errorColor),
+              themeData.textTheme.bodySmall!
+                  .copyWith(color: themeData.colorScheme.error),
           hintTextStyle: decoration.hintTextStyle ??
-              themeData.textTheme.headline5!
+              themeData.textTheme.headlineSmall!
                   .copyWith(color: themeData.hintColor),
         );
 

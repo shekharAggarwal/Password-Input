@@ -159,7 +159,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   alignment: Alignment.topCenter,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.black,
+                        backgroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                         )),
